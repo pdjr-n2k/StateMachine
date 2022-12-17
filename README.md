@@ -4,19 +4,23 @@ ADT implementing a hybrid state machine / jump vector.
 
 StateMachine allows an application to register a collection of
 functions each of which is associated with a unique machine state
-represented by an integer.
+represented by an integer value.
 
-At each tick of the process engine the function associated with
-the current state is executed and its result used to set a new
-(possibly identical) machine state which will condition subsequent
+At each tick of the state machine process engine the function
+associated with the current state is executed and the machine state
+set to this function's return value, so influenceing future process
 action.
+
+The library was built to support microprocessor firmware which needed
+to handle a range of actions dependent upon the operation or sequence
+of operations of a single configuration button.
 
 ## Types
 
 ### typedef struct { int _state_; int (_*handler_)(int _value_); } tJump;
 ```
 StateMachine::tJump jumpVector[] = {
-  { 0, updateModuleInstance },
+  { 0, updateModuleInstance },  
   { 0, 0 }
 };
 ```
