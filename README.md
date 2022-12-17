@@ -13,7 +13,7 @@ action.
 
 ## Types
 
-### typedef struct { int _state_; int (_*handler_)(uint8_t _value_); } tJump;
+### typedef struct { int _state_; int (_*handler_)(int _value_); } tJump;
 ```
 StateMachine::tJump jumpVector[] = {
   { 0, updateModuleInstance },
@@ -45,9 +45,9 @@ stateMachine.setState(1);
 Force the state machine into the state specified by integer value
 *state*.
 
-### process()
+### process(int _value_)
 ```
-stateMachine.process();
+stateMachine.process(23);
 ```
 Process the state machine by executing the callback function associated
 with the current value of the machine's internal state and subsequently

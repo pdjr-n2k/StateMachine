@@ -5,11 +5,11 @@
 
 class StateMachine {
   public:
-    typedef struct { int state; int (*handler)(uint8_t value); } tJump;
+    typedef struct { int state; int (*handler)(int value); } tJump;
 
     StateMachine(int initialState, tJump *jumpVector);
     void setState(int state);
-    void process(uint8_t value);
+    void process(int value);
   
   private:
     tJump *jumpVector;
