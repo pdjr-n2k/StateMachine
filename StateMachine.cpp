@@ -1,6 +1,6 @@
 #include "StateMachine.h"
 
-StateMachine::StateMachine(int initialState, tJumpVector *jumpVector) {
+StateMachine::StateMachine(int initialState, tJump *jumpVector) {
     this->state = initialState;
     this->jumpVector = jumpVector;
 }
