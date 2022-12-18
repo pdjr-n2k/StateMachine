@@ -53,7 +53,7 @@ Force the state machine into the state specified by integer value
 int state = stateMachine.currentState();
 ```
 Get the current state of the state machine.
- 
+
 ### process(int _value_)
 ```
 stateMachine.process(23);
