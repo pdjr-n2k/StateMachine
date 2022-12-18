@@ -9,6 +9,7 @@ class StateMachine {
 
     StateMachine(int initialState, tJump *jumpVector);
     void setState(int state);
+    int currentState();
     void process(int value);
   
   private:
