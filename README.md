@@ -54,7 +54,7 @@ int state = stateMachine.currentState();
 ```
 Get the current state of the state machine.
 
-### process(int _value_)
+### process(int *value*)
 ```
 stateMachine.process(23);
 ```
