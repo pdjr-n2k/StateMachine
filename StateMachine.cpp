@@ -9,7 +9,7 @@ void StateMachine::setState(int state) {
     this->state = state;
 }
 
-int currentState() {
+int StateMachine::currentState() {
   return(this->state);
 }
 
