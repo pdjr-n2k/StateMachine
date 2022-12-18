@@ -58,6 +58,8 @@ Get the current state of the state machine.
 ```
 stateMachine.process(23);
 ```
-Process the state machine by executing the callback function associated
-with the current value of the machine's internal state and subsequently
-updating the internal state to the value returned by the callback. 
+Exercise the state machine by performing a process tick. This causes the
+machine to execute the callback function associated with the current
+value of the machine's internal state passing *value* as the single
+callback argument. The machine's internal state is set to the valu
+returned by the callback. 
